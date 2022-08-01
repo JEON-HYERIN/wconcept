@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 #wrapper {
   // overflow: hidden;
   min-width: 320px;
@@ -42,6 +46,3 @@ div[class*="inner"] {
   margin: 0 auto;
 }
 
-.common-inner {
-
-}

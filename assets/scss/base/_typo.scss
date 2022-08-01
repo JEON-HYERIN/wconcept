@@ -1,0 +1,55 @@
+// font - Proxima
+@font-face {
+  font-family: "ProximaNova-Light";
+  font-weight: 400;
+  src: url("../fonts/proxima-nova-light.woff2");
+}
+
+@font-face {
+  font-family: "ProximaNova-Regular";
+  font-weight: 400;
+  src: url("../fonts/proxima-nova-regular.woff2");
+}
+
+@font-face {
+  font-family: "ProximaNova-Semibold";
+  font-weight: 500;
+  src: url("../fonts/proxima-nova-semibold.woff2");
+}
+
+@font-face {
+  font-family: "ProximaNova-Bold";
+  font-weight: 400;
+  src: url("../fonts/proxima-nova-bold.woff2");
+}
+
+// font - NotoSansKR
+@font-face {
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+  src: url("../fonts/NotoSansKR-Regular.woff2");
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-weight: 500;
+  src: url("../fonts/NotoSansKR-Medium.woff2");
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-weight: 700;
+  src: url("../fonts/NotoSansKR-Bold.woff2");
+}
+
+body {
+  font-family: "ProximaNova-Regular", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+@media (max-width: 359px) {
+  html {
+    font-size: 13px;
+  }
+}
