@@ -34,4 +34,18 @@ $(function(){
       slidesPerView: 'auto',
       centeredSlides: true,
     });
+    
+    const mdpickSwiper1 = new Swiper('.sc-mdpick .category-list-wrap.swiper', {
+      loop: true,
+      slidesPerView: 'auto',
+    });
+    
+    const mdpickSwiper2 = new Swiper('.sc-mdpick .product-list-wrap.swiper', {
+      loop: true,
+    });
+    
+    mdpickSwiper1.on('slideChange', function () {
+        idx = mdpickSwiper1.realIndex;
+        mdpickSwiper2.slideToLoop(idx);
+    });
 });
