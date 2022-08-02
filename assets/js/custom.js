@@ -6,17 +6,26 @@ $(function(){
 
     $(window).scroll(function(){
       const currentScroll = $(this).scrollTop();
-      const gnb = $('#gnb').offset().top;
+      const stickyNav = $('.sticky-nav').offset().top;
 
-      if(currentScroll >= gnb){
-        $('#gnb').addClass('fixed');
+      if(currentScroll >= stickyNav){
+        $('.sticky-nav').addClass('fixed');
       } else {
-        $('#gnb').removeClass('fixed');
+        $('.sticky-nav').removeClass('fixed');
       }
     });
 
     // swiper
     const gnbSwiper = new Swiper('#gnb .swiper', {
       slidesPerView: 'auto'
+    });
+
+    const visualSwiper = new Swiper('.sc-visual .swiper', {
+      // autoplay: true,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        type: "fraction",
+      },
     });
 });

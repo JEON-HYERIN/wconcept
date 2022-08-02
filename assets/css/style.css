@@ -77,9 +77,11 @@ body { font-family: "ProximaNova-Regular", "Apple SD Gothic Neo", "Noto Sans KR"
 
 #header .btn-util.cart .count { position: absolute; bottom: 9px; right: -5px; min-width: 20px; height: 20px; padding: 0 3px; border-radius: 10px; font-family: "ProximaNova-Semibold", sans-serif; font-size: 11px; line-height: 20px; text-align: center; color: #fff; background: #fa5500; }
 
-#gnb { position: relative; left: 0; top: 0; width: 100%; background-color: #fff; height: 2.8125rem; -webkit-transition: top .3s; transition: top .3s; z-index: 10; }
+.sticky-nav { position: -webkit-sticky; position: sticky; left: 0; top: 0; width: 100%; height: 2.8125rem; background-color: #fff; border-bottom: 1px solid transparent; z-index: 10; }
 
-#gnb.fixed { position: fixed; top: -50px; }
+.sticky-nav.fixed { border-bottom-color: #f2f2f2; }
+
+#gnb { height: 100%; }
 
 #gnb .swiper { width: 100%; height: 100%; }
 
@@ -89,6 +91,30 @@ body { font-family: "ProximaNova-Regular", "Apple SD Gothic Neo", "Noto Sans KR"
 
 #gnb .gnb-item:first-child { padding-left: 1.25rem; }
 
-#gnb .link-gnb { display: block; font-family: "ProximaNova-Bold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif; font-weight: 700; font-size: .875rem; line-height: 2.8125rem; margin: 0 auto; white-space: nowrap; text-align: center; position: relative; }
+#gnb .link-gnb { position: relative; display: block; margin: 0 auto; font-family: "ProximaNova-Bold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif; font-weight: 700; font-size: .875rem; line-height: 2.8125rem; white-space: nowrap; text-align: center; }
 
-#gnb .link-gnb.active::before { display: block; content: ""; width: 0.25rem; height: 0.25rem; border-radius: 50%; background-color: #fa5500; position: absolute; top: 0.875rem; right: -0.4375rem; }
+#gnb .link-gnb.active::before { content: ''; position: absolute; top: 0.875rem; right: -0.4375rem; width: 0.25rem; height: 0.25rem; border-radius: 50%; background-color: #fa5500; }
+
+.sc-visual .link-banner { display: block; }
+
+.sc-visual .link-banner img { width: 100%; }
+
+.sc-visual .slide-area { position: relative; overflow: hidden; margin-bottom: 3rem; }
+
+.sc-visual .swiper { max-height: 624px; }
+
+.sc-visual .swiper-slide a { position: relative; display: block; height: 100%; }
+
+.sc-visual .swiper-slide a::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(40%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.5))); background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.5)); }
+
+.sc-visual .swiper-slide .thumb-box img { display: block; width: 100%; }
+
+.sc-visual .swiper-slide .info-box { position: absolute; bottom: 6.875rem; left: 0; color: #fff; width: 100%; padding: 0 11.2vw; word-break: keep-all; word-wrap: break-word; z-index: 1; }
+
+.sc-visual .swiper-slide .info-box .sub-title { display: block; font-size: 3.733333vw; line-height: 4.8vw; letter-spacing: -.074666667vw; margin-bottom: 3.2vw; }
+
+.sc-visual .swiper-slide .info-box .title { font-family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif; font-weight: 500; font-size: 8vw; line-height: 9.6vw; letter-spacing: -.24vw; white-space: nowrap; overflow: hidden; }
+
+.sc-visual .swiper-slide .info-box .desc { font-size: 3.733333333vw; line-height: 5.333333333vw; letter-spacing: -.074666667vw; margin-top: 3.2vw; }
+
+.sc-visual .swiper-pagination { position: absolute; top: 1.5rem; right: 1.25rem; font-size: .6875rem; line-height: 1rem; color: rgba(255, 255, 255, 0.6); letter-spacing: .55px; bottom: auto; left: auto; width: auto; }
