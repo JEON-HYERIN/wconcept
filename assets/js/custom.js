@@ -21,11 +21,17 @@ $(function(){
     });
 
     const visualSwiper = new Swiper('.sc-visual .swiper', {
-      // autoplay: true,
+      autoplay: true,
       loop: true,
       pagination: {
         el: '.swiper-pagination',
         type: "fraction",
       },
+    });
+
+    const saleSwiper = new Swiper('.sc-sale .swiper', {
+      loop: true,
+      slidesPerView: 'auto',
+      centeredSlides: true,
     });
 });
