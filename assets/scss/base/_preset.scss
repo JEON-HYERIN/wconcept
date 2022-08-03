@@ -93,9 +93,6 @@ section img {
 }
 
 .product-list {
-  white-space: nowrap;
-  font-size: 0;
-  margin-bottom: 0;
   padding: 0 1.25rem 1.25rem;
   overflow: hidden;
 
@@ -109,6 +106,7 @@ section img {
 .product-item {
   position: relative;
   float: left;
+  margin-bottom: 1.25rem;
 
   a {
     width: 100%;
@@ -116,16 +114,31 @@ section img {
   }
 
   .thumb-box {
+    height: 66.66666667vw;
+    margin-bottom: 0.75rem;
+    background: url("../images/banner/onerror_img_product.png") no-repeat center/100%;
+    overflow: hidden;
+
     img {
       height: 100%;
       object-fit: cover;
     }
   }
 
+  .info-box {
+    padding: 0 0.625rem 0 0;
+  }
+
   .title {
+    margin-bottom: 0.25rem;
     font-family: "ProximaNova-Regular", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
+    font-size: .813rem;
     font-weight: 400;
     line-height: .9375rem;
+    color: #000;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 
   .desc {
@@ -138,7 +151,7 @@ section img {
     }
   }
 
-  .price {
+  .final-price {
     float: left;
     font-family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
     font-size: .938rem;

@@ -325,13 +325,10 @@
 
 // showroom
 .sc-showroom {
-  .content {}
 
   .showroom-list-wrap {
     padding: 0 1.25rem;
   }
-
-  .showroom-list {}
 
   .showroom-item {
     width: 44.26666667vw;
@@ -346,7 +343,6 @@
     background: url("../images/banner/onerror_img_product.png") no-repeat center/100%;
 
     .thumb-box {
-      img {}
 
       &::after {
         display: none;
@@ -420,15 +416,9 @@
     }
   }
 
-  .content {}
-
   .exclusive-list-wrap {
     padding: 0 1.25rem;
   }
-
-  .exclusive-list {}
-
-  .exclusive-item {}
 
   .exclusive-banner {
     .thumb-box {
@@ -436,8 +426,6 @@
       &::after {
         display: none;
       }
-
-      img {}
     }
 
     .caption-box {
@@ -467,12 +455,8 @@
         line-height: 1.25rem;
         color: #fff;
       }
-
     }
-
   }
-
-  .goods-list {}
 
   .goods-item {
     padding: 1rem 0;
@@ -491,8 +475,6 @@
     .thumb-box {
       width: 19%;
       float: left;
-
-      img {}
     }
 
     .info-box {
@@ -554,6 +536,75 @@
       font-family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
       font-size: .875rem;
       color: #000;
+    }
+  }
+}
+
+// update
+.sc-update {
+  background: #f5f5f5;
+  padding: 3.25rem 0;
+
+  .sc-title {
+    padding: 0 1.25rem;
+  }
+
+  .product-list-wrap {
+    padding-left: 1.25rem;
+  }
+
+  .product-list {
+    padding: 0;
+    overflow: visible;
+  }
+
+  .product-item {
+    width: 44.26666666666667vw;
+    margin: 0 1.06666666vw 0 0;
+    margin-bottom: 0;
+  }
+
+  .product-area {
+    .thumb-box {
+      height: 58.66666666666667vw;
+    }
+  }
+}
+
+// trend
+.sc-trend {
+  padding: 0 1.25rem;
+
+  .tag-list {
+    margin-bottom: 0.625rem;
+    margin-right: -0.375rem;
+
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+
+  .tag-item {
+    float: left;
+    margin: 0 0.375rem 0.375rem 0;
+  }
+
+  .btn-tag {
+    font-size: .875rem;
+    line-height: 1.875rem;
+    letter-spacing: -.28px;
+    background: #f5f5f5;
+    color: #777;
+    padding: 0 0.625rem;
+    border-radius: 0.125rem;
+
+    &.active {
+      font-family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
+      font-weight: 500;
+      background: #000;
+      color: #fff;
     }
   }
 }
