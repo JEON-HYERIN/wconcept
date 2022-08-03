@@ -59,6 +59,15 @@ body {
   text-transform: uppercase;
 }
 
+.multiline {
+  height: 2rem;
+  white-space: normal !important;
+  word-break: keep-all;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
 @media (max-width: 359px) {
   html {
     font-size: 13px;

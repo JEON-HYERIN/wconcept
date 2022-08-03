@@ -30,14 +30,20 @@ $(function(){
     });
 
     const saleSwiper = new Swiper('.sc-sale .swiper', {
-      loop: true,
       slidesPerView: 'auto',
-      centeredSlides: true,
+    });
+
+    const showroomSwiper = new Swiper('.sc-showroom .swiper', {
+      slidesPerView: 'auto',
+    });
+    const exclusiveSwiper = new Swiper('.sc-exclusive .swiper', {
+      spaceBetween: 8,
     });
     
     const mdpickSwiper1 = new Swiper('.sc-mdpick .category-list-wrap.swiper', {
-      loop: true,
+      // loop: true,
       slidesPerView: 'auto',
+      slideToClickedSlide: true
     });
     
     const mdpickSwiper2 = new Swiper('.sc-mdpick .product-list-wrap.swiper', {
@@ -47,5 +53,10 @@ $(function(){
     mdpickSwiper1.on('slideChange', function () {
         idx = mdpickSwiper1.realIndex;
         mdpickSwiper2.slideToLoop(idx);
+    });
+
+    $('.sc-mdpick .category-item .btn-category').click(function(e){
+      e.preventDefault();
+      $(this).parent().addClass('selected').siblings().removeClass('selected');
     });
 });

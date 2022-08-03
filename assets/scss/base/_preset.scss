@@ -84,6 +84,14 @@ section img {
   background: rgba(0, 0, 0, .2);
 }
 
+.info-box {
+
+  strong.title,
+  strong.sub-title {
+    display: block;
+  }
+}
+
 .product-list {
   white-space: nowrap;
   font-size: 0;
@@ -115,14 +123,14 @@ section img {
   }
 
   .title {
-    font-family: "ProximaNova-Regular","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic","맑은 고딕",sans-serif;
+    font-family: "ProximaNova-Regular", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
     font-weight: 400;
     line-height: .9375rem;
   }
 
   .desc {
     letter-spacing: -.32px;
-    
+
     &::after {
       content: '';
       display: block;
@@ -132,7 +140,7 @@ section img {
 
   .price {
     float: left;
-    font-family: "ProximaNova-Semibold","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic","맑은 고딕",sans-serif;
+    font-family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
     font-size: .938rem;
     font-weight: 500;
     margin-right: 0.5rem;
