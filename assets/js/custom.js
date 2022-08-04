@@ -51,25 +51,33 @@ $(function(){
     const updateSwiper = new Swiper('.sc-update .swiper', {
       slidesPerView: 'auto',
     });
+    const specialSwiper = new Swiper('.sc-special .swiper', {
+      slidesPerView: 'auto',
+      observer: true, 
+      observeParents: true,
+    });
     
     const mdpickSwiper1 = new Swiper('.sc-mdpick .category-list-wrap.swiper', {
       // loop: true,
       slidesPerView: 'auto',
-      slideToClickedSlide: true
+
     });
     
     const mdpickSwiper2 = new Swiper('.sc-mdpick .product-list-wrap.swiper', {
       loop: true,
     });
     
-    mdpickSwiper1.on('slideChange', function () {
-        idx = mdpickSwiper1.realIndex;
-        mdpickSwiper2.slideToLoop(idx);
-    });
+    // mdpickSwiper1.on('slideChange', function () {
+    //     idx = mdpickSwiper1.realIndex;
+    //     mdpickSwiper2.slideToLoop(idx);
+    // });
 
-    $('.sc-mdpick .category-item .btn-category').click(function(e){
-      e.preventDefault();
-      $(this).parent().addClass('selected').siblings().removeClass('selected');
+    // mdpick
+    $('.sc-mdpick .btn-category').click(function(){
+      const dataType=$(this).data('type');
+      $('.sc-mdpick .btn-category').removeClass('active');
+      $(this).addClass('active');
+      $(dataType).addClass('visible').siblings('.product-list-wrap').removeClass('visible');
     });
 
     // trend
@@ -78,5 +86,13 @@ $(function(){
       $('.sc-trend .btn-tag').removeClass('active');
       $(this).addClass('active');
       $(dataType).addClass('visible').siblings('.group-trend').removeClass('visible');
+    });
+
+    // special
+    $('.sc-special .btn-category').click(function(){
+      const dataType=$(this).data('type');
+      $('.sc-special .btn-category').removeClass('active');
+      $(this).addClass('active');
+      $(dataType).addClass('visible').siblings('.product-list-wrap').removeClass('visible');
     });
 });

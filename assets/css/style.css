@@ -263,7 +263,7 @@ body { font-family: "ProximaNova-Regular", "Apple SD Gothic Neo", "Noto Sans KR"
 
 .sc-mdpick .category-item:nth-child(2n+1) { padding-right: 0.125rem; }
 
-.sc-mdpick .category-item.selected .btn-category { color: #000; }
+.sc-mdpick .category-item.active .btn-category { color: #000; }
 
 .sc-mdpick .btn-category { height: 100%; font-family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif; font-weight: 500; font-size: .875rem; color: #aaa; }
 
@@ -346,3 +346,23 @@ body { font-family: "ProximaNova-Regular", "Apple SD Gothic Neo", "Noto Sans KR"
 .sc-issue .issue-area .title { font-family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif; font-weight: 500; color: #000; font-size: 1rem; line-height: 1.25rem; margin-bottom: 0.25rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 
 .sc-issue .issue-area .desc { font-size: .875rem; line-height: 1.063rem; color: #777; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+
+.sc-special .category-list { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; margin-bottom: 1.125rem; margin-left: 1.25rem; }
+
+.sc-special .category-item { margin-right: 1.25rem; }
+
+.sc-special .btn-category { letter-spacing: -.28px; height: 1.25rem; font-family: "ProximaNova-Semibold","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic","맑은 고딕",sans-serif; font-weight: 500; font-size: .875rem; color: #aaa; }
+
+.sc-special .btn-category.active { color: #000; }
+
+.sc-special .product-list-wrap { padding-left: 1.25rem; display: none; }
+
+.sc-special .product-list-wrap.visible { display: block; }
+
+.sc-special .product-list { padding: 0; overflow: visible; }
+
+.sc-special .product-item { width: 44.26666666666667vw; margin-right: 1.06666666vw; margin-bottom: 0; }
+
+.sc-special .product-area .thumb-box { height: 58.66666666666667vw; }
+
+.sc-special .product-area .title { font-size: .75rem; line-height: 1rem; color: #333; }

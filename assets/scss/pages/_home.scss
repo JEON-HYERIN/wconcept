@@ -272,7 +272,7 @@
       padding-right: 0.125rem;
     }
 
-    &.selected {
+    &.active {
 
       .btn-category {
         color: #000;
@@ -598,5 +598,63 @@
       white-space: nowrap;
       text-overflow: ellipsis;
     }
+  }
+}
+
+// special
+.sc-special {
+  .category-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.125rem;
+    margin-left: 1.25rem
+  }
+  .category-item {
+    margin-right: 1.25rem;
+  }
+  .btn-category {
+    letter-spacing: -.28px;
+    height: 1.25rem;
+    font-family: "ProximaNova-Semibold","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic","맑은 고딕",sans-serif;
+    font-weight: 500;
+    font-size: .875rem;
+    color: #aaa;
+    &.active {
+      color: #000;
+    }
+  }
+  .product-list-wrap {
+    padding-left: 1.25rem;
+    display: none;
+    &.visible {
+      display: block;
+    }
+  }
+  .product-list {
+    padding: 0;
+    overflow: visible;
+  }
+  .product-item {
+    width: 44.26666666666667vw;
+    margin-right: 1.06666666vw;
+    margin-bottom: 0;
+  }
+  .product-area {
+    .thumb-box {
+      height: 58.66666666666667vw;
+      img {}
+    }
+
+    .info-box {
+
+    }
+    .title {
+      font-size: .75rem;
+      line-height: 1rem;
+      color: #333;
+    }
+    .desc {}
+    .selling-price {}
+    .discount-rate {}
   }
 }
