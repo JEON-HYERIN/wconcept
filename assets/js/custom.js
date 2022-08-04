@@ -62,4 +62,12 @@ $(function(){
       e.preventDefault();
       $(this).parent().addClass('selected').siblings().removeClass('selected');
     });
+
+    // trend
+    $('.sc-trend .btn-tag').click(function(){
+      const dataType=$(this).data('type');
+      $('.sc-trend .btn-tag').removeClass('active');
+      $(this).addClass('active');
+      $(dataType).addClass('visible').siblings('.group-trend').removeClass('visible');
+    });
 });

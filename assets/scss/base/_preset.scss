@@ -84,6 +84,12 @@ section img {
   background: rgba(0, 0, 0, .2);
 }
 
+.thumb-shadow {
+  &::after {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, .3));
+  }
+}
+
 .info-box {
 
   strong.title,
@@ -151,7 +157,7 @@ section img {
     }
   }
 
-  .final-price {
+  .selling-price {
     float: left;
     font-family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
     font-size: .938rem;

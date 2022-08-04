@@ -51,6 +51,8 @@ section img { display: block; width: 100%; }
 
 .thumb-dim { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.2); }
 
+.thumb-shadow::after { background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.3))); background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.3)); }
+
 .info-box strong.title, .info-box strong.sub-title { display: block; }
 
 .product-list { padding: 0 1.25rem 1.25rem; overflow: hidden; }
@@ -73,7 +75,7 @@ section img { display: block; width: 100%; }
 
 .product-item .desc::after { content: ''; display: block; clear: both; }
 
-.product-item .final-price { float: left; font-family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif; font-size: .938rem; font-weight: 500; margin-right: 0.5rem; color: #000; }
+.product-item .selling-price { float: left; font-family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif; font-size: .938rem; font-weight: 500; margin-right: 0.5rem; color: #000; }
 
 .product-item .discount-rate { float: right; color: #fa5500; margin-left: 0.25rem; font-size: .813rem; font-weight: 500; }
 
@@ -283,7 +285,7 @@ body { font-family: "ProximaNova-Regular", "Apple SD Gothic Neo", "Noto Sans KR"
 
 .sc-exclusive .goods-area .discount-rate { position: absolute; right: 1.25rem; bottom: 0; font-family: "ProximaNova-Regular"; font-size: .875rem; color: #fa5500; }
 
-.sc-exclusive .goods-area .final-price { float: left; margin-top: 1px; font-family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif; font-size: .875rem; color: #000; }
+.sc-exclusive .goods-area .selling-price { float: left; margin-top: 1px; font-family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif; font-size: .875rem; color: #000; }
 
 .sc-update { background: #f5f5f5; padding: 3.25rem 0; }
 
@@ -305,6 +307,34 @@ body { font-family: "ProximaNova-Regular", "Apple SD Gothic Neo", "Noto Sans KR"
 
 .sc-trend .tag-item { float: left; margin: 0 0.375rem 0.375rem 0; }
 
+.sc-trend .tag-item:last-child { margin-right: 0; }
+
 .sc-trend .btn-tag { font-size: .875rem; line-height: 1.875rem; letter-spacing: -.28px; background: #f5f5f5; color: #777; padding: 0 0.625rem; border-radius: 0.125rem; }
 
 .sc-trend .btn-tag.active { font-family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif; font-weight: 500; background: #000; color: #fff; }
+
+.sc-trend .group-trend { display: none; }
+
+.sc-trend .group-trend.visible { display: block; }
+
+.sc-trend .trend-list::after { content: ''; display: block; clear: both; }
+
+.sc-trend .trend-item { padding-right: 0.125rem; width: 50%; float: left; margin-bottom: 0.25rem; }
+
+.sc-trend .trend-item:nth-child(2n) { padding-left: 0.125rem; padding-right: 0; }
+
+.sc-trend .trend-area .info-box { width: 100%; color: #fff; position: absolute; bottom: 1.25rem; left: 0; padding: 0 1.25rem; }
+
+.sc-trend .trend-area .title { font-size: .75rem; margin-bottom: 0.25rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+
+.sc-trend .trend-area .desc ::after { content: ''; display: block; clear: both; }
+
+.sc-trend .trend-area .selling-price { float: left; font-family: "ProximaNova-Semibold","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic","맑은 고딕",sans-serif; font-weight: 500; font-size: .875rem; }
+
+.sc-trend .trend-area .discount-rate { float: right; font-size: .875rem; color: #fa5500; }
+
+.sc-trend .banner-area .info-box { width: 100%; position: absolute; left: 0; bottom: 1.25rem; color: #fff; padding: 0 5rem 0 1.25rem; word-break: keep-all; }
+
+.sc-trend .banner-area .title { font-family: "ProximaNova-Semibold","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic","맑은 고딕",sans-serif; font-weight: 500; font-size: 1rem; margin-bottom: 0.25rem; }
+
+.sc-trend .banner-area .desc { font-size: .875rem; line-height: 1.125rem; letter-spacing: -.28px; }
