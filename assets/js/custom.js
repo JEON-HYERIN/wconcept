@@ -39,6 +39,9 @@ $(function(){
     const exclusiveSwiper = new Swiper('.sc-exclusive .swiper', {
       spaceBetween: 8,
     });
+    const stylepickSwiper = new Swiper('.sc-stylepick .swiper', {
+      spaceBetween: 8,
+    });
     const updateSwiper = new Swiper('.sc-update .swiper', {
       slidesPerView: 'auto',
     });
