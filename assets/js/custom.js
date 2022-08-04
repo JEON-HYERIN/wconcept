@@ -42,6 +42,12 @@ $(function(){
     const stylepickSwiper = new Swiper('.sc-stylepick .swiper', {
       spaceBetween: 8,
     });
+    const issueSwiper = new Swiper('.sc-issue .swiper', {
+      spaceBetween: 8,
+    });
+    const beautypickSwiper = new Swiper('.sc-beautypick .swiper', {
+      spaceBetween: 8,
+    });
     const updateSwiper = new Swiper('.sc-update .swiper', {
       slidesPerView: 'auto',
     });

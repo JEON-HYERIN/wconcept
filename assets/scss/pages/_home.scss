@@ -383,39 +383,7 @@
 }
 
 // exclusive 
-.sc-exclusive {
-  .sc-title {
-    .link-more {
-      display: inline-block;
-      width: 1.25rem;
-      height: 1.25rem;
-      margin-top: -0.25rem;
-      vertical-align: -3px;
-
-      &::before,
-      &::after {
-        content: '';
-        position: absolute;
-        width: 0.125rem;
-        height: 0.875rem;
-        background: #000;
-      }
-
-      &::before {
-        top: 3px;
-        left: 50%;
-        margin-left: -1px;
-      }
-
-      &::after {
-        top: 3px;
-        left: 50%;
-        margin-left: -1px;
-        transform: rotate(90deg);
-      }
-    }
-  }
-}
+.sc-exclusive {}
 
 // update
 .sc-update {
@@ -587,6 +555,48 @@
       font-size: .875rem;
       line-height: 1.125rem;
       letter-spacing: -.28px;
+    }
+  }
+}
+
+// issue
+.sc-issue {
+  .issue-list-wrap {
+    padding: 0 1.25rem;
+  }
+
+  .issue-list {}
+
+  .issue-item {}
+
+  .issue-area {
+    .thumb-box {
+      margin-bottom: 1rem;
+
+      img {}
+    }
+
+    .info-box {}
+
+    .title {
+      font-family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
+      font-weight: 500;
+      color: #000;
+      font-size: 1rem;
+      line-height: 1.25rem;
+      margin-bottom: 0.25rem;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .desc {
+      font-size: .875rem;
+      line-height: 1.063rem;
+      color: #777;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
   }
 }
