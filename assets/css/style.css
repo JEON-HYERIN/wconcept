@@ -347,13 +347,15 @@ body { font-family: "ProximaNova-Regular", "Apple SD Gothic Neo", "Noto Sans KR"
 
 .sc-issue .issue-area .desc { font-size: .875rem; line-height: 1.063rem; color: #777; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 
-.sc-special .category-list { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; margin-bottom: 1.125rem; margin-left: 1.25rem; }
+.sc-special .category-list { position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; margin-bottom: 1.125rem; margin-left: 1.25rem; }
 
-.sc-special .category-item { margin-right: 1.25rem; }
+.sc-special .category-item { margin-right: 1.5rem; }
 
 .sc-special .btn-category { letter-spacing: -.28px; height: 1.25rem; font-family: "ProximaNova-Semibold","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic","맑은 고딕",sans-serif; font-weight: 500; font-size: .875rem; color: #aaa; }
 
 .sc-special .btn-category.active { color: #000; }
+
+.sc-special .category-border { content: ''; display: block; position: absolute; bottom: 0; left: 0; height: 0.125rem; -webkit-box-sizing: content-box; box-sizing: content-box; padding: 0 0.5px; width: 1.5625rem; margin: 0; background-color: #000; -webkit-transition: all .2s ease-out; transition: all .2s ease-out; }
 
 .sc-special .product-list-wrap { padding-left: 1.25rem; display: none; }
 
@@ -366,3 +368,21 @@ body { font-family: "ProximaNova-Regular", "Apple SD Gothic Neo", "Noto Sans KR"
 .sc-special .product-area .thumb-box { height: 58.66666666666667vw; }
 
 .sc-special .product-area .title { font-size: .75rem; line-height: 1rem; color: #333; }
+
+@media screen and (max-width: 375px) { .category-item { margin-right: 1.25rem; } }
+
+.sc-theme { position: relative; margin-bottom: 3.75rem; }
+
+.sc-theme .group-theme { margin-bottom: 4rem; }
+
+.sc-theme .theme-banner { margin-bottom: 1rem; padding: 0 1.25rem; }
+
+.sc-theme .theme-banner .info-box { margin-top: 1rem; }
+
+.sc-theme .theme-banner .title { font-family: "ProximaNova-Semibold","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic","맑은 고딕",sans-serif; font-weight: 500; font-size: 1rem; color: #000; margin-bottom: 0.25rem; }
+
+.sc-theme .theme-banner .desc { font-size: .875rem; line-height: 1.125rem; color: #777; letter-spacing: -.28px; }
+
+.sc-theme .theme-list-wrap { padding: 0 1.25rem; }
+
+.sc-theme .theme-item { width: 29.0666666vw; margin-right: 1.06666666vw; }

@@ -56,11 +56,40 @@ $(function(){
       observer: true, 
       observeParents: true,
     });
+    const themeSwiper1 = new Swiper('.sc-theme .swiper1', {
+      slidesPerView: 'auto',
+    });
+    const themeSwiper2 = new Swiper('.sc-theme .swiper2', {
+      slidesPerView: 'auto',
+    });
+    const themeSwiper3 = new Swiper('.sc-theme .swiper3', {
+      slidesPerView: 'auto',
+    });
+    const themeSwiper4 = new Swiper('.sc-theme .swiper4', {
+      slidesPerView: 'auto',
+    });
+    const themeSwiper5 = new Swiper('.sc-theme .swiper5', {
+      slidesPerView: 'auto',
+    });
+    const themeSwiper6 = new Swiper('.sc-theme .swiper6', {
+      slidesPerView: 'auto',
+    });
+    const themeSwiper7 = new Swiper('.sc-theme .swiper7', {
+      slidesPerView: 'auto',
+    });
+    const themeSwiper8 = new Swiper('.sc-theme .swiper8', {
+      slidesPerView: 'auto',
+    });
+    const themeSwiper9 = new Swiper('.sc-theme .swiper9', {
+      slidesPerView: 'auto',
+    });
+    const themeSwiper10 = new Swiper('.sc-theme .swiper10', {
+      slidesPerView: 'auto',
+    });
     
     const mdpickSwiper1 = new Swiper('.sc-mdpick .category-list-wrap.swiper', {
       // loop: true,
       slidesPerView: 'auto',
-
     });
     
     const mdpickSwiper2 = new Swiper('.sc-mdpick .product-list-wrap.swiper', {
@@ -88,11 +117,26 @@ $(function(){
       $(dataType).addClass('visible').siblings('.group-trend').removeClass('visible');
     });
 
+    $('.sc-special .category-border').css({
+      left: $('.sc-special .btn-category.active').position().left,
+      width: Math.round($('.sc-special .btn-category.active').width())
+    });
+
     // special
     $('.sc-special .btn-category').click(function(){
       const dataType=$(this).data('type');
+
       $('.sc-special .btn-category').removeClass('active');
       $(this).addClass('active');
       $(dataType).addClass('visible').siblings('.product-list-wrap').removeClass('visible');
+
+      // special category-border
+      const activeLeft = $('.sc-special .btn-category.active').position().left;
+      const activeWidth = $('.sc-special .btn-category.active').width();
+
+      $('.sc-special .category-border').css({
+        left: activeLeft,
+        width: Math.round(activeWidth)
+      });
     });
 });
