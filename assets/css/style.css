@@ -119,6 +119,10 @@ section img { display: block; width: 100%; }
 
 .sc-title .link-more::after { top: 3px; left: 50%; margin-left: -1px; -webkit-transform: rotate(90deg); transform: rotate(90deg); }
 
+.sc-title.white .link-more::before, .sc-title.white .link-more::after { background: #fff; }
+
+.funding-badge { position: absolute; bottom: 0; right: 0; background: url("../images/icon/tag_funding.png") center right no-repeat; background-size: contain; width: 4.563rem; height: 1.5rem; z-index: 1; }
+
 @font-face { font-family: "ProximaNova-Light"; font-weight: 400; src: url("../fonts/proxima-nova-light.woff2"); }
 
 @font-face { font-family: "ProximaNova-Regular"; font-weight: 400; src: url("../fonts/proxima-nova-regular.woff2"); }
@@ -136,6 +140,10 @@ section img { display: block; width: 100%; }
 body { font-family: "ProximaNova-Regular", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif; font-weight: 400; line-height: 100%; }
 
 .sc-title { position: relative; margin-bottom: 1rem; font-family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif; font-weight: 500; font-size: 1.25rem; line-height: 1.5rem; text-align: center; text-transform: uppercase; }
+
+.sc-title.white { color: #fff; }
+
+.sc-title span { font-size: 1.063rem; font-weight: 700; }
 
 .multiline { height: 2rem; white-space: normal !important; word-break: keep-all; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
 
@@ -178,6 +186,22 @@ body { font-family: "ProximaNova-Regular", "Apple SD Gothic Neo", "Noto Sans KR"
 #gnb .link-gnb { position: relative; display: block; margin: 0 auto; font-family: "ProximaNova-Bold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif; font-weight: 700; font-size: .875rem; line-height: 2.8125rem; white-space: nowrap; text-align: center; }
 
 #gnb .link-gnb.active::before { content: ''; position: absolute; top: 0.875rem; right: -0.4375rem; width: 0.25rem; height: 0.25rem; border-radius: 50%; background-color: #fa5500; }
+
+.swiper-pagination-fraction { bottom: 0; font-size: .875rem; line-height: 1.25rem; color: #aaa; }
+
+.swiper-pagination-fraction .swiper-pagination-current { color: #333; }
+
+.swiper-pagination-fraction.white { color: #777; }
+
+.swiper-pagination-fraction.white .swiper-pagination-current { color: #fff; }
+
+.swiper-button-prev, .swiper-button-next { width: 1.063rem; height: 1.25rem; top: auto; bottom: 0; margin-top: -22px; background-position: center; background-repeat: no-repeat; background-size: cover; }
+
+.swiper-button-prev::after, .swiper-button-next::after { display: none; }
+
+.swiper-button-prev { background-image: url("../images/icon/btn_arrow_prev.png"); left: 3.125rem; }
+
+.swiper-button-next { background-image: url("../images/icon/btn_arrow_next.png"); right: 3.125rem; }
 
 .sc-visual { margin-bottom: 3rem; }
 
@@ -393,8 +417,6 @@ body { font-family: "ProximaNova-Regular", "Apple SD Gothic Neo", "Noto Sans KR"
 
 .sc-specialprice .price-area .tag { font-family: "ProximaNova-Semibold","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic","맑은 고딕",sans-serif; font-weight: 500; font-size: 1.125rem; width: 5rem; height: 5rem; padding: 0.875rem 0 0 0.625rem; color: #fff; position: absolute; top: 0; left: 0; background: url("../images/icon/tag_special_price_sale.png") no-repeat; background-size: cover; }
 
-.sc-specialprice .price-area .badge { position: absolute; bottom: 0; right: 0; background: url("../images/icon/tag_funding.png") center right no-repeat; background-size: contain; width: 4.563rem; height: 1.5rem; z-index: 1; }
-
 .sc-specialprice .price-area .info-box { background: #fff; height: 6.0625rem; padding: 1.25rem; }
 
 .sc-specialprice .price-area .brand { font-family: "ProximaNova-Semibold","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic","맑은 고딕",sans-serif; font-weight: 500; font-size: .75rem; margin-bottom: 0.125rem; color: #333; }
@@ -405,14 +427,72 @@ body { font-family: "ProximaNova-Regular", "Apple SD Gothic Neo", "Noto Sans KR"
 
 .sc-specialprice .price-area .selling-price { float: left; margin-top: 1px; font-family: "ProximaNova-Semibold","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic","맑은 고딕",sans-serif; font-weight: 500; font-size: .875rem; color: #000; }
 
-.sc-specialprice .swiper-pagination-fraction { bottom: 0; font-size: .875rem; line-height: 1.25rem; color: #aaa; }
+.sc-makeityours .swiper .swiper-pagination-bullets .swiper-pagination-bullet { margin: 0 4px; }
 
-.sc-specialprice .swiper-pagination-fraction .swiper-pagination-current { color: #333; }
+.sc-makeityours .product-item { width: 50%; margin-bottom: 1.5rem; }
 
-.sc-specialprice .swiper-button-prev, .sc-specialprice .swiper-button-next { width: 1.063rem; height: 1.25rem; top: auto; bottom: 0; margin-top: -22px; background-position: center; background-repeat: no-repeat; background-size: cover; }
+.sc-makeityours .product-item:nth-child(2n) { padding-left: 0.125rem; }
 
-.sc-specialprice .swiper-button-prev::after, .sc-specialprice .swiper-button-next::after { display: none; }
+.sc-makeityours .product-item:nth-child(2n+1) { padding-right: 0.125rem; }
 
-.sc-specialprice .swiper-button-prev { background-image: url("../images/icon/btn_arrow_prev.png"); left: 3.125rem; }
+.sc-makeityours .product-area .thumb-box { height: 58.66666666666667vw; }
 
-.sc-specialprice .swiper-button-next { background-image: url("../images/icon/btn_arrow_next.png"); right: 3.125rem; }
+.sc-makeityours .swiper-pagination { left: 0; bottom: 0; width: 100%; height: 1.25rem; line-height: 1.75rem; }
+
+.sc-makeityours .swiper-pagination-bullet { width: 6px; height: 6px; line-height: 1.75rem; display: inline-block; border-radius: 100%; background: #000; opacity: .1; cursor: pointer; }
+
+.sc-makeityours .swiper-pagination-bullet-active { background: #000; opacity: 1; }
+
+.sc-wconceptTV { background: #000; padding: 3.75rem 0; }
+
+.sc-wconceptTV .sc-title { z-index: 2; }
+
+.sc-wconceptTV .swiper-back { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; }
+
+.sc-wconceptTV .swiper-back-in { position: relative; }
+
+.sc-wconceptTV .swiper-slide-back { position: absolute; top: 0; left: 0; opacity: 0; -webkit-transition: opacity .4s ease; transition: opacity .4s ease; }
+
+.sc-wconceptTV .swiper-slide-back.swiper-slide-active { opacity: 1; z-index: 1; }
+
+.sc-wconceptTV .swiper-slide-back::after { position: absolute; top: 0; left: 0; content: ""; display: block; width: 120%; height: 120%; background: #000; opacity: .7; }
+
+.sc-wconceptTV .swiper-slide-back img { width: 140%; height: 140%; margin: -10% 0 0 -25%; -webkit-filter: blur(20px); filter: blur(20px); }
+
+.sc-wconceptTV .wconceptTV-list-wrap { padding-bottom: 2.75rem; }
+
+.sc-wconceptTV .wconceptTV-item { text-align: center; width: 64vw; margin: 0 0.25rem; transition: all .3s ease; -webkit-transition: all .3s ease; }
+
+.sc-wconceptTV .wconceptTV-item.swiper-slide { opacity: .2; }
+
+.sc-wconceptTV .wconceptTV-item.swiper-slide-active { opacity: 1; }
+
+.sc-wconceptTV .wconceptTV-item.swiper-slide-active .ico-play { display: block; }
+
+.sc-wconceptTV .wconceptTV-area .ico-play { background: url("../images/icon/ico_play.png") no-repeat; background-size: cover; width: 3.375rem; height: 3.625rem; position: absolute; top: 50%; left: 50%; margin: -1.688rem 0 0 -1.813rem; display: none; }
+
+.sc-wconceptTV .wconceptTV-area .info-box { background: #fff; height: 6.25rem; padding: 1.25rem; text-align: left; }
+
+.sc-wconceptTV .wconceptTV-area .title { font-family: "ProximaNova-Semibold","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic","맑은 고딕",sans-serif; font-weight: 500; font-size: 1rem; color: #333; margin-bottom: 0.25rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+
+.sc-wconceptTV .wconceptTV-area .desc { color: #777; font-size: .875rem; line-height: 1.25rem; letter-spacing: -.28px; height: 2.5rem; white-space: normal; word-break: keep-all; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.sc-wconceptTV .swiper-button-prev { left: 6.875rem; }
+
+.sc-wconceptTV .swiper-button-next { right: 6.875rem; }
+
+.sc-wdnastyle { padding: 0 1.25rem; margin-bottom: 0; }
+
+.sc-wdnastyle .wdnastyle-list { overflow: hidden; width: 100%; }
+
+.sc-wdnastyle .wdnastyle-list::after { content: ''; display: block; clear: both; }
+
+.sc-wdnastyle .wdnastyle-item { float: left; width: 33.33%; padding: 0.03125rem; }
+
+.sc-wdnastyle .wdnastyle-area .thumb-box { width: 95px; height: 95px; background: url("../images/banner/wdna_style_mask.png") no-repeat center/100%; }
+
+.sc-wdnastyle .wdnastyle-area .thumb-box img { max-height: 100%; -o-object-fit: cover; object-fit: cover; }
+
+.sc-wdnastyle .wdnastyle-area .thumb-box img::after { background-color: transparent; }
+
+.sc-wdnastyle .wdnastyle-area .name { position: absolute; bottom: 0; left: 0; z-index: 1; width: 100%; padding: 0 0.75rem 0.75rem; font-family: "ProximaNova-Light","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic","맑은 고딕",sans-serif; font-weight: 400; font-size: .75rem; color: #fff; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }

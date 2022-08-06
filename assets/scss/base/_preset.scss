@@ -304,6 +304,7 @@ section img {
 }
 
 .sc-title {
+
   .link-more {
     display: inline-block;
     width: 1.25rem;
@@ -333,4 +334,24 @@ section img {
       transform: rotate(90deg);
     }
   }
+
+  &.white {
+    .link-more {
+      &::before,
+      &::after {
+        background: #fff;
+      }
+    }
+  }
+}
+
+.funding-badge {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: url("../images/icon/tag_funding.png") center right no-repeat;
+  background-size: contain;
+  width: 4.563rem;
+  height: 1.5rem;
+  z-index: 1;
 }

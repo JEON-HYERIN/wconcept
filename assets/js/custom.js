@@ -86,7 +86,8 @@ $(function(){
     const themeSwiper10 = new Swiper('.sc-theme .swiper10', {
       slidesPerView: 'auto',
     });
-    const specialprice = new Swiper('.sc-specialprice .swiper', {
+    const specialpriceSwiper = new Swiper('.sc-specialprice .swiper', {
+      loop: true,
       pagination: {
         el: ".sc-specialprice .swiper-pagination",
         type: "fraction",
@@ -97,7 +98,36 @@ $(function(){
         nextEl: '.sc-specialprice .swiper-button-next',
       },
     });
+    const makeityoursSwiper = new Swiper('.sc-makeityours .swiper', {
+      pagination: {
+        el: ".sc-makeityours .swiper-pagination",
+        clickable: true
+      },
+    });
+    const wconceptTVSwiper = new Swiper('.sc-wconceptTV .swiper', {
+      autoplay: true,
+      loop: true,
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      pagination: {
+        el: ".sc-wconceptTV .swiper-pagination",
+        type: "fraction",
+      },
     
+      navigation: {
+        prevEl: '.sc-wconceptTV .swiper-button-prev',
+        nextEl: '.sc-wconceptTV .swiper-button-next',
+      },
+    });
+    const wconceptTVSwiper2 = new Swiper('.sc-wconceptTV .swiper-back', {
+      effect: 'fade',
+      touchRatio: 0,
+    });
+    wconceptTVSwiper.on('slideChange', function () {
+      idx = wconceptTVSwiper.realIndex;
+      wconceptTVSwiper2.slideToLoop(idx);
+  });
+
     const mdpickSwiper1 = new Swiper('.sc-mdpick .category-list-wrap.swiper', {
       // loop: true,
       slidesPerView: 'auto',

@@ -57,6 +57,15 @@ body {
   line-height: 1.5rem;
   text-align: center;
   text-transform: uppercase;
+
+  &.white {
+    color: #fff;
+  }
+
+  span {
+    font-size: 1.063rem;
+    font-weight: 700;
+  }
 }
 
 .multiline {
