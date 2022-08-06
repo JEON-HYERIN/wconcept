@@ -86,6 +86,17 @@ $(function(){
     const themeSwiper10 = new Swiper('.sc-theme .swiper10', {
       slidesPerView: 'auto',
     });
+    const specialprice = new Swiper('.sc-specialprice .swiper', {
+      pagination: {
+        el: ".sc-specialprice .swiper-pagination",
+        type: "fraction",
+      },
+    
+      navigation: {
+        prevEl: '.sc-specialprice .swiper-button-prev',
+        nextEl: '.sc-specialprice .swiper-button-next',
+      },
+    });
     
     const mdpickSwiper1 = new Swiper('.sc-mdpick .category-list-wrap.swiper', {
       // loop: true,
