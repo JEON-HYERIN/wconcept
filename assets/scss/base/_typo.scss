@@ -43,35 +43,49 @@
 }
 
 body {
-  font-family: "ProximaNova-Regular", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
-  font-weight: 400;
+  font: {
+    family: "ProximaNova-Regular", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
+    weight: 400;
+  }
+
   line-height: 100%;
 }
 
 .sc-title {
   position: relative;
   margin-bottom: 1rem;
-  font-family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
-  font-weight: 500;
-  font-size: 1.25rem;
   line-height: 1.5rem;
-  text-align: center;
-  text-transform: uppercase;
+
+  font: {
+    family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
+    weight: 500;
+    size: 1.25rem;
+  }
+
+  text: {
+    align: center;
+    transform: uppercase;
+  }
 
   &.white {
     color: #fff;
   }
 
   span {
-    font-size: 1.063rem;
-    font-weight: 700;
+    font: {
+      size: 1.063rem;
+      weight: 700;
+    }
   }
 }
 
 .sc-desc {
-  font-family: "ProximaNova-Regular","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic","맑은 고딕",sans-serif;
-  font-size: .8125rem;
-  font-weight: 400;
+  font: {
+    family: "ProximaNova-Regular", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
+    size: .8125rem;
+    weight: 400;
+  }
+
   line-height: 1.125rem;
   letter-spacing: -.26px;
   text-align: center;
@@ -90,5 +104,118 @@ body {
 @media (max-width: 359px) {
   html {
     font-size: 13px;
+  }
+}
+
+.selling-price {
+  float: left;
+  font-family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
+}
+
+.discount-rate {
+  font-weight: 500;
+  color: #fa5500;
+}
+
+.product-item {
+  .title {
+    @include ellipse;
+    margin-bottom: 0.25rem;
+
+    font: {
+      family: "ProximaNova-Regular", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
+      size: .813rem;
+      weight: 400;
+    }
+
+    line-height: .9375rem;
+    color: #000;
+  }
+
+  .desc {
+    letter-spacing: -.32px;
+
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+
+  .selling-price {
+    font: {
+      size: .938rem;
+      weight: 500;
+    }
+
+    margin-right: 0.5rem;
+    color: #000;
+  }
+
+  .discount-rate {
+    float: right;
+    margin-left: 0.25rem;
+    font-size: .813rem;
+  }
+}
+
+.goods-area {
+  .brand {
+    display: block;
+
+    font: {
+      family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
+      weight: 500;
+      size: .75rem;
+    }
+
+    margin-bottom: 0.125rem;
+    color: #333;
+  }
+
+  .title {
+    @include ellipse;
+    font-size: .75rem;
+    margin-bottom: 0.375rem;
+    color: #777;
+  }
+
+  .desc {
+    font-weight: 500;
+
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+
+  .price {
+    font: {
+      family: "ProximaNova-Regular";
+      size: .75rem;
+    }
+
+    color: #aaa;
+    margin-left: 0.5rem;
+    text-decoration: line-through;
+    overflow: hidden;
+  }
+
+  .discount-rate {
+    position: absolute;
+    right: 1.25rem;
+    bottom: 0;
+
+    font: {
+      family: "ProximaNova-Regular";
+      size: .875rem;
+    }
+  }
+
+  .selling-price {
+    margin-top: 1px;
+    font-size: .875rem;
+    color: #000;
   }
 }

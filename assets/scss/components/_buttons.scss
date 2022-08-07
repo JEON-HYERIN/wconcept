@@ -10,7 +10,7 @@
 
   &.white {
     color: #777;
-    
+
     .swiper-pagination-current {
       color: #fff;
     }
@@ -32,10 +32,12 @@
     display: none;
   }
 }
+
 .swiper-button-prev {
   background-image: url("../images/icon/btn_arrow_prev.png");
   left: 3.125rem;
 }
+
 .swiper-button-next {
   background-image: url("../images/icon/btn_arrow_next.png");
   right: 3.125rem;

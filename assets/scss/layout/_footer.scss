@@ -72,15 +72,14 @@
 
     &+.corp-item::before {
       content: '';
-      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 1px;
       height: 0.625rem;
       margin: auto;
       bottom: 0;
       background-color: #ccc;
-      position: absolute;
-      top: 0;
-      left: 0;
     }
   }
 
@@ -89,8 +88,10 @@
     color: #333;
 
     strong {
-      font-family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
-      font-weight: 500;
+      font: {
+        family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
+        weight: 500;
+      }
     }
   }
 

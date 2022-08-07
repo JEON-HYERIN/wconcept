@@ -61,8 +61,12 @@
         height: 20px;
         padding: 0 3px;
         border-radius: 10px;
-        font-family: "ProximaNova-Semibold", sans-serif;
-        font-size: 11px;
+
+        font: {
+          family: "ProximaNova-Semibold", sans-serif;
+          size: 11px;
+        }
+
         line-height: 20px;
         text-align: center;
         color: #fff;
@@ -114,13 +118,16 @@
     position: relative;
     display: block;
     margin: 0 auto;
-    font-family: "ProximaNova-Bold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
-    font-weight: 700;
-    font-size: .875rem;
+
+    font: {
+      family: "ProximaNova-Bold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
+      weight: 700;
+      size: .875rem;
+    }
+
     line-height: 2.8125rem;
     white-space: nowrap;
     text-align: center;
-
 
     &.active::before {
       content: '';
