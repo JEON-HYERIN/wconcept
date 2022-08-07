@@ -29,7 +29,7 @@
     display: flex;
   }
 
-  .btn-util {
+  .link-util {
     position: relative;
     display: flex;
     align-items: center;
@@ -42,36 +42,32 @@
       background-position: center;
     }
 
-    &.search {
-      .ico-search {
-        background-image: url("../images/icon/ico_search.svg");
-      }
+    .ico-search {
+      background-image: url("../images/icon/ico_search.svg");
     }
 
-    &.cart {
-      .ico-cart {
-        background-image: url("../images/icon/ico_cart.svg");
+    .ico-cart {
+      background-image: url("../images/icon/ico_cart.svg");
+    }
+
+    .count {
+      position: absolute;
+      bottom: 9px;
+      right: -5px;
+      min-width: 20px;
+      height: 20px;
+      padding: 0 3px;
+      border-radius: 10px;
+
+      font: {
+        family: "ProximaNova-Semibold", sans-serif;
+        size: 11px;
       }
 
-      .count {
-        position: absolute;
-        bottom: 9px;
-        right: -5px;
-        min-width: 20px;
-        height: 20px;
-        padding: 0 3px;
-        border-radius: 10px;
-
-        font: {
-          family: "ProximaNova-Semibold", sans-serif;
-          size: 11px;
-        }
-
-        line-height: 20px;
-        text-align: center;
-        color: #fff;
-        background: #fa5500;
-      }
+      line-height: 20px;
+      text-align: center;
+      color: #fff;
+      background: #fa5500;
     }
   }
 }

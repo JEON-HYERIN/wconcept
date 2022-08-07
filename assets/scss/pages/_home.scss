@@ -438,6 +438,50 @@
       height: 38.66666667vw;
     }
   }
+
+  .btn-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14.06rem;
+    height: 2.5rem;
+    margin: 1.875rem auto 0;
+    font-size: .875rem;
+    line-height: 2.5rem;
+    letter-spacing: -.28px;
+    border: 1px solid #eaeaea;
+    border-radius: 1.25rem;
+    text-align: center;
+
+    .ico-refresh {
+      width: 0.9375rem;
+      height: 0.9375rem;
+      margin-right: 0.6rem;
+
+      background: {
+        image: url("../images/icon/ico_refresh.png");
+        size: 0.9375rem;
+      }
+    }
+
+    .swiper-pagination {
+      width: auto;
+      position: static;
+      color: #aaa;
+      line-height: inherit;
+      font-size: inherit;
+      letter-spacing: inherit;
+      margin-left: 0.5rem;
+
+      &-current {
+        color: #000;
+      }
+
+      &-total {
+        color: #777;
+      }
+    }
+  }
 }
 
 // trend
@@ -650,20 +694,6 @@
     }
   }
 
-  .category-border {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 1.5625rem;
-    height: 0.125rem;
-    padding: 0 0.5px;
-    margin: 0;
-    box-sizing: content-box;
-    background-color: #000;
-    transition: all .2s ease-out;
-  }
-
   .product-list-wrap {
     padding-left: 1.25rem;
     display: none;
@@ -861,6 +891,231 @@
       }
 
       color: #000;
+    }
+  }
+}
+
+// ranking
+.sc-ranking {
+  .tab-area {
+    padding: 0 1.25rem;
+
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+
+  .btn-tab {
+    float: left;
+    font-size: .875rem;
+    text-align: center;
+    width: 50%;
+    font-family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
+    font-weight: 500;
+    line-height: 2.75rem;
+    padding-top: 0 !important;
+    background-color: #fff;
+    color: #aaa;
+    border: 1px solid #eaeaea;
+
+    &.active {
+      background-color: #000;
+      color: #fff;
+      border-color: #000;
+    }
+
+    &+.btn-tab {
+      margin-left: -1px;
+    }
+  }
+
+  .category-list-wrap {
+    margin-top: 1.125rem;
+    margin-bottom: 1.125rem;
+    padding-right: 1.25rem;
+  }
+
+  .category-list {
+    overflow: visible;
+    margin-left: 1.25rem !important;
+  }
+
+  .category-item {
+    width: auto !important;
+    margin-right: 1.5rem;
+  }
+
+  .btn-category {
+    height: 1.25rem;
+    font-family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
+    font-weight: 500;
+    font-size: .875rem;
+    color: #aaa;
+
+    &.active {
+      color: #000;
+    }
+  }
+
+  .tab-content {
+    display: none;
+
+    &.visible {
+      display: block;
+    }
+  }
+
+  .product-list {
+    padding: 0 1.25rem 1.25rem;
+  }
+
+  .product-item {
+    width: 33.333333333%;
+    padding: 0 0.125rem;
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .product-area {
+    .thumb-box {
+      height: 38.66666667vw;
+    }
+
+    .rank {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1.5rem;
+      height: 1.5rem;
+      font-size: .75rem;
+      color: #fff;
+      line-height: 1.5625rem;
+      text-align: center;
+      background: rgba(0, 0, 0, .4);
+      z-index: 1;
+    }
+  }
+
+  .group-swiper {
+    .swiper {
+      display: none;
+
+      &.visible {
+        display: block;
+      }
+    }
+  }
+
+  .brand-list {
+    margin: 0 0 1.563rem;
+    padding: 0 1.25rem;
+  }
+
+  .brand-item {
+    width: 100%;
+    height: 54px;
+    line-height: 3.25rem;
+    border-bottom: 1px solid #f1f1f1;
+    overflow: hidden;
+    transition: height .5s;
+
+    &:first-child {
+      border-top: 1px solid #f1f1f1;
+    }
+
+    &.active {
+      height: 48.8vw;
+    }
+
+    .thumb-area {
+      display: flex;
+      padding: 0.125rem 0 1.5rem 1.25rem;
+    }
+
+    .thumb-box {
+      display: block;
+      width: 25%;
+      margin: 0 1px;
+    }
+
+    .cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, .6);
+      color: #fff;
+      font-size: .75rem;
+      line-height: normal;
+      text-align: center;
+      letter-spacing: -.6px;
+    }
+
+    .ico-more {
+      display: block;
+      width: 1.188rem;
+      height: 1.188rem;
+      margin-bottom: 12%;
+
+      background: {
+        image: url("../images/icon/ico_ranking_brand_more.png");
+        size: cover;
+      }
+    }
+  }
+
+  .btn-brand {
+    position: relative;
+    display: block;
+    min-height: 44px;
+    font-family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif;
+    font-weight: 500;
+    font-size: .875rem;
+    color: #000;
+    width: 100%;
+    text-align: left;
+
+    .rank {
+      color: #fa5500;
+      margin-right: 0.75rem;
+    }
+  }
+
+  .swiper-pagination {
+    position: static;
+    height: 1.25rem;
+    line-height: 1.75rem;
+
+    &.swiper-pagination-bullets {
+      &-bullet {
+        margin: 0 4px;
+      }
+    }
+
+    &-bullet {
+      width: 6px;
+      height: 6px;
+      background: #000;
+      opacity: .1;
+
+      &-active {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 359px) {
+  .sc-ranking {
+    .brand-item {
+      height: 46px;
     }
   }
 }

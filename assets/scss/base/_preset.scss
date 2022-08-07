@@ -258,13 +258,38 @@ section img {
   }
 }
 
-.funding-badge {
+.funding-badge,
+.preorder-badge {
   position: absolute;
   bottom: 0;
   right: 0;
+  z-index: 1;
+}
+
+.funding-badge {
   background: url("../images/icon/tag_funding.png") center right no-repeat;
   background-size: contain;
   width: 4.563rem;
   height: 1.5rem;
-  z-index: 1;
+}
+
+.preorder-badge {
+  background: url("../images/icon/tag_pre-order.png") center right no-repeat;
+  background-size: contain;
+  width: 5.313rem;
+  height: 1.5rem;
+}
+
+.category-border {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1.5625rem;
+  height: 0.125rem;
+  padding: 0 0.5px;
+  margin: 0;
+  box-sizing: content-box;
+  background-color: #000;
+  transition: all .2s ease-out;
 }
