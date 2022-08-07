@@ -133,14 +133,26 @@ $(function(){
       slidesPerView: 'auto',
     });
     
-    const mdpickSwiper2 = new Swiper('.sc-mdpick .product-list-wrap.swiper', {
+    const mdpickSwiper2 = new Swiper('.sc-mdpick .swiper', {
+      loop: true,
+    });
+    const mdpickSwiper3 = new Swiper('.sc-mdpick .inner-swiper', {
       loop: true,
     });
     
-    // mdpickSwiper1.on('slideChange', function () {
-    //     idx = mdpickSwiper1.realIndex;
-    //     mdpickSwiper2.slideToLoop(idx);
-    // });
+    mdpickSwiper1.on('slideChange', function () {
+        idx = mdpickSwiper1.realIndex;
+        mdpickSwiper2.slideToLoop(idx);
+    });
+    const styleSwiper = new Swiper('.sc-style .product-list-wrap', {
+      slidesPerView: 'auto',
+      observer: true, 
+      observeParents: true,
+    });
+    const styleSwiper2 = new Swiper('.sc-style .category-list-wrap', {
+      slidesPerView: 'auto',
+      speed: 1500
+    });
 
     // mdpick
     $('.sc-mdpick .btn-category').click(function(){
@@ -163,6 +175,16 @@ $(function(){
       width: Math.round($('.sc-special .btn-category.active').width())
     });
 
+    // style
+    $('.sc-style .btn-category').click(function(e){
+      e.preventDefault();
+      const dataType=$(this).data('type');
+
+      $('.sc-style .btn-category').removeClass('active');
+      $(this).addClass('active');
+      $(dataType).addClass('visible').siblings('.product-list-wrap').removeClass('visible');
+    });
+
     // special
     $('.sc-special .btn-category').click(function(){
       const dataType=$(this).data('type');
@@ -179,5 +201,36 @@ $(function(){
         left: activeLeft,
         width: Math.round(activeWidth)
       });
+    });
+
+    // floating-nav
+    let lastScroll = 0;
+    $(window).scroll(function(){
+      const currentScroll = $(this).scrollTop();
+      if(currentScroll > lastScroll) {
+        $('.floating-nav').addClass('invisible');
+      } else {
+        $('.floating-nav').removeClass('invisible');
+      }
+      lastScroll = currentScroll;
+
+      if (currentScroll > 500) {
+        $('.floating-nav .link-history').addClass('active');
+        gsap.to('.floating-nav .btn-top', {
+          display: 'block',
+          duration: 0,
+        }) 
+      } else {
+        $('.floating-nav .link-history').removeClass('active');
+        gsap.to('.floating-nav .btn-top', {
+          display: 'none',
+          duration: 0,
+        }) 
+      }
+    });
+
+
+    $('.floating-nav .btn-top').click(function(){
+      $('html, body').stop().animate({scrollTop: '0'}, 500);
     });
 });

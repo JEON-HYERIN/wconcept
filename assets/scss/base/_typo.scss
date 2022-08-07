@@ -68,6 +68,16 @@ body {
   }
 }
 
+.sc-desc {
+  font-family: "ProximaNova-Regular","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic","맑은 고딕",sans-serif;
+  font-size: .8125rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+  letter-spacing: -.26px;
+  text-align: center;
+  color: #777;
+}
+
 .multiline {
   height: 2rem;
   white-space: normal !important;
