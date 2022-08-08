@@ -167,9 +167,9 @@ body { font-family: "ProximaNova-Regular", "Apple SD Gothic Neo", "Noto Sans KR"
 
 #header .group-flex { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
-#header .logo::before { content: ''; display: inline-block; width: 50px; height: 50px; background: url("../images/icon/logo.svg") no-repeat center; vertical-align: top; }
+#header .logo a { display: block; }
 
-#header .logo::before a { display: block; }
+#header .logo a::before { content: ''; display: inline-block; width: 50px; height: 50px; background: url("../images/icon/logo.svg") no-repeat center; vertical-align: top; }
 
 #header .util-area { display: -webkit-box; display: -ms-flexbox; display: flex; }
 
@@ -513,7 +513,7 @@ body { font-family: "ProximaNova-Regular", "Apple SD Gothic Neo", "Noto Sans KR"
 
 .sc-ranking .tab-area::after { content: ''; display: block; clear: both; }
 
-.sc-ranking .btn-tab { float: left; font-size: .875rem; text-align: center; width: 50%; font-family: "ProximaNova-Semibold","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic","맑은 고딕",sans-serif; font-weight: 500; line-height: 2.75rem; padding-top: 0 !important; background-color: #fff; color: #aaa; border: 1px solid #eaeaea; }
+.sc-ranking .btn-tab { float: left; font-size: .875rem; text-align: center; width: 50%; font-family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif; font-weight: 500; line-height: 2.75rem; padding-top: 0 !important; background-color: #fff; color: #aaa; border: 1px solid #eaeaea; }
 
 .sc-ranking .btn-tab.active { background-color: #000; color: #fff; border-color: #000; }
 
@@ -525,7 +525,7 @@ body { font-family: "ProximaNova-Regular", "Apple SD Gothic Neo", "Noto Sans KR"
 
 .sc-ranking .category-item { width: auto !important; margin-right: 1.5rem; }
 
-.sc-ranking .btn-category { height: 1.25rem; font-family: "ProximaNova-Semibold","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic","맑은 고딕",sans-serif; font-weight: 500; font-size: .875rem; color: #aaa; }
+.sc-ranking .btn-category { height: 1.25rem; font-family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif; font-weight: 500; font-size: .875rem; color: #aaa; }
 
 .sc-ranking .btn-category.active { color: #000; }
 
@@ -561,7 +561,7 @@ body { font-family: "ProximaNova-Regular", "Apple SD Gothic Neo", "Noto Sans KR"
 
 .sc-ranking .brand-item .ico-more { display: block; width: 1.188rem; height: 1.188rem; margin-bottom: 12%; background-image: url("../images/icon/ico_ranking_brand_more.png"); background-size: cover; }
 
-.sc-ranking .btn-brand { position: relative; display: block; min-height: 44px; font-family: "ProximaNova-Semibold","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic","맑은 고딕",sans-serif; font-weight: 500; font-size: .875rem; color: #000; width: 100%; text-align: left; }
+.sc-ranking .btn-brand { position: relative; display: block; min-height: 44px; font-family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif; font-weight: 500; font-size: .875rem; color: #000; width: 100%; text-align: left; }
 
 .sc-ranking .btn-brand .rank { color: #fa5500; margin-right: 0.75rem; }
 
