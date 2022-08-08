@@ -135,7 +135,7 @@ body { font-family: "ProximaNova-Regular", "Apple SD Gothic Neo", "Noto Sans KR"
 
 @media (max-width: 359px) { html { font-size: 13px; } }
 
-.selling-price { float: left; font-family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif; }
+.discount-price { float: left; font-family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif; }
 
 .discount-rate { font-weight: 500; color: #fa5500; }
 
@@ -145,7 +145,7 @@ body { font-family: "ProximaNova-Regular", "Apple SD Gothic Neo", "Noto Sans KR"
 
 .product-item .desc::after { content: ''; display: block; clear: both; }
 
-.product-item .selling-price { font-size: .938rem; font-weight: 500; margin-right: 0.5rem; color: #000; }
+.product-item .discount-price { font-size: .938rem; font-weight: 500; margin-right: 0.5rem; color: #000; }
 
 .product-item .discount-rate { float: right; margin-left: 0.25rem; font-size: .813rem; }
 
@@ -161,7 +161,7 @@ body { font-family: "ProximaNova-Regular", "Apple SD Gothic Neo", "Noto Sans KR"
 
 .goods-area .discount-rate { position: absolute; right: 1.25rem; bottom: 0; font-family: "ProximaNova-Regular"; font-size: .875rem; }
 
-.goods-area .selling-price { margin-top: 1px; font-size: .875rem; color: #000; }
+.goods-area .discount-price { margin-top: 1px; font-size: .875rem; color: #000; }
 
 #header { position: relative; padding: 0 10px; overflow: hidden; }
 
@@ -431,7 +431,7 @@ body { font-family: "ProximaNova-Regular", "Apple SD Gothic Neo", "Noto Sans KR"
 
 .sc-trend .trend-area .desc::after { content: ''; display: block; clear: both; }
 
-.sc-trend .trend-area .selling-price { font-weight: 500; font-size: .875rem; }
+.sc-trend .trend-area .discount-price { font-weight: 500; font-size: .875rem; }
 
 .sc-trend .trend-area .discount-rate { float: right; font-size: .875rem; font-weight: 400; }
 
@@ -507,7 +507,7 @@ body { font-family: "ProximaNova-Regular", "Apple SD Gothic Neo", "Noto Sans KR"
 
 .sc-specialprice .price-area .price { font-family: "ProximaNova-Regular"; font-size: .75rem; color: #aaa; margin-left: 0.5rem; text-decoration: line-through; overflow: hidden; }
 
-.sc-specialprice .price-area .selling-price { margin-top: 1px; font-weight: 500; font-size: .875rem; color: #000; }
+.sc-specialprice .price-area .discount-price { margin-top: 1px; font-weight: 500; font-size: .875rem; color: #000; }
 
 .sc-ranking .tab-area { padding: 0 1.25rem; }
 
