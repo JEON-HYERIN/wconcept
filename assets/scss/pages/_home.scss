@@ -8,68 +8,76 @@
   }
 
   .swiper {
-    max-height: 624px;
-  }
 
-  .swiper-slide {
-    a {
-      height: 100%;
+    &-slide {
+      a {
+  
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, .5));
+        }
+      }
+  
+      .thumb-box {
+        position: relative;
+        padding-bottom: 150%;
 
-      &::after {
-        content: '';
+        &::after {
+          display: none;
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+  
+      .info-box {
         position: absolute;
-        top: 0;
+        bottom: 6.875rem;
         left: 0;
+        color: #fff;
         width: 100%;
-        height: 100%;
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, .5));
+        padding: 0 11.2vw;
+  
+        word: {
+          break: keep-all;
+          wrap: break-word;
+        }
+  
+        z-index: 1;
       }
-    }
-
-    .thumb-box {
-      &::after {
-        display: none;
+  
+      .sub-title {
+        font-size: 3.733333vw;
+        line-height: 4.8vw;
+        letter-spacing: -.074666667vw;
+        margin-bottom: 3.2vw;
       }
-    }
-
-    .info-box {
-      position: absolute;
-      bottom: 6.875rem;
-      left: 0;
-      color: #fff;
-      width: 100%;
-      padding: 0 11.2vw;
-
-      word: {
-        break: keep-all;
-        wrap: break-word;
+  
+      .title {
+        @include title(null);
+        font-size: 8vw;
+        line-height: 9.6vw;
+        letter-spacing: -.24vw;
+        white-space: nowrap;
+        overflow: hidden;
       }
-
-      ;
-      z-index: 1;
-    }
-
-    .sub-title {
-      font-size: 3.733333vw;
-      line-height: 4.8vw;
-      letter-spacing: -.074666667vw;
-      margin-bottom: 3.2vw;
-    }
-
-    .title {
-      @include title(null);
-      font-size: 8vw;
-      line-height: 9.6vw;
-      letter-spacing: -.24vw;
-      white-space: nowrap;
-      overflow: hidden;
-    }
-
-    .desc {
-      font-size: 3.733333333vw;
-      line-height: 5.333333333vw;
-      letter-spacing: -.074666667vw;
-      margin-top: 3.2vw;
+  
+      .desc {
+        font-size: 3.733333333vw;
+        line-height: 5.333333333vw;
+        letter-spacing: -.074666667vw;
+        margin-top: 3.2vw;
+      }
     }
   }
 
@@ -248,10 +256,6 @@
     height: 1.25rem;
     margin-right: 1.5rem;
 
-    &.swiper-slide-active {
-      color: #000;
-    }
-
     &:nth-child(2n) {
       padding-left: 0.125rem;
     }
@@ -259,11 +263,11 @@
     &:nth-child(2n+1) {
       padding-right: 0.125rem;
     }
+  }
 
-    &.active {
-      .btn-category {
-        color: #000;
-      }
+  .swiper-slide-active {
+    .btn-category {
+      color: #000;
     }
   }
 
@@ -276,21 +280,24 @@
 
     height: 100%;
     color: #aaa;
+
   }
 
   .product-item {
-    padding-right: 0.125rem;
     margin-bottom: 1.5rem;
     width: 50%;
+
+    &:nth-child(2n) {
+      padding-left: 0.125rem;
+    }
+    &:nth-child(2n+1) {
+      padding-right: 0.125rem;
+    }
   }
 
   .product-area {
     .thumb-box {
-      margin-bottom: 0.75rem;
-    }
-
-    .info-box {
-      padding: 0 0.625rem 0 0;
+      height: 58.66666666666667vw;
     }
   }
 }
@@ -675,6 +682,10 @@
 
   .category-item {
     margin-right: 1.5rem;
+
+    @include small {
+      margin-right: 1.25rem;
+    }
   }
 
   .btn-category {
@@ -762,12 +773,6 @@
       line-height: 1rem;
       color: #333;
     }
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .sc-special .category-item {
-    margin-right: 1.25rem;
   }
 }
 
@@ -954,7 +959,10 @@
     font-size: .875rem;
     color: #aaa;
 
-    &.active {
+  }
+
+  .swiper-slide-active {
+    .btn-category {
       color: #000;
     }
   }
@@ -998,16 +1006,6 @@
     }
   }
 
-  .group-swiper {
-    .swiper {
-      display: none;
-
-      &.visible {
-        display: block;
-      }
-    }
-  }
-
   .brand-list {
     margin: 0 0 1.563rem;
     padding: 0 1.25rem;
@@ -1027,6 +1025,10 @@
 
     &.active {
       height: 48.8vw;
+    }
+
+    @include xsmall {
+      height: 46px;
     }
 
     .thumb-area {
@@ -1090,45 +1092,11 @@
 
   .swiper-pagination {
     position: static;
-    height: 1.25rem;
-    line-height: 1.75rem;
-
-    &.swiper-pagination-bullets {
-      &-bullet {
-        margin: 0 4px;
-      }
-    }
-
-    &-bullet {
-      width: 6px;
-      height: 6px;
-      background: #000;
-      opacity: .1;
-
-      &-active {
-        opacity: 1;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 359px) {
-  .sc-ranking {
-    .brand-item {
-      height: 46px;
-    }
   }
 }
 
 // makeityours
 .sc-makeityours {
-  .swiper {
-    .swiper-pagination-bullets {
-      .swiper-pagination-bullet {
-        margin: 0 4px;
-      }
-    }
-  }
 
   .product-item {
     width: 50%;
@@ -1146,30 +1114,6 @@
   .product-area {
     .thumb-box {
       height: 58.66666666666667vw;
-    }
-  }
-
-  .swiper-pagination {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1.25rem;
-    line-height: 1.75rem;
-
-    &-bullet {
-      display: inline-block;
-      width: 6px;
-      height: 6px;
-      line-height: 1.75rem;
-      border-radius: 100%;
-      background: #000;
-      opacity: .1;
-      cursor: pointer;
-    }
-
-    &-bullet-active {
-      background: #000;
-      opacity: 1;
     }
   }
 }
@@ -1333,8 +1277,6 @@
 
   .wdnastyle-area {
     .thumb-box {
-      width: 95px;
-      height: 95px;
 
       background: {
         image: url("../images/banner/wdna_style_mask.png");
@@ -1344,7 +1286,7 @@
       }
 
       img {
-        max-height: 100%;
+        height: 95px;
         object-fit: cover;
 
         &::after {
@@ -1510,11 +1452,8 @@
       display: block;
     }
   }
-}
 
-@media screen and (max-width: 375px) {
-  .floating-nav {
-
+  @include small {
     .bg-shadow,
     .link-gender::before {
       width: 16vw;

@@ -3,8 +3,11 @@
 }
 
 #wrapper {
-  // overflow: hidden;
   min-width: 320px;
+}
+
+section {
+  overflow: hidden;
 }
 
 /* skip-nav */
@@ -280,7 +283,7 @@ section img {
   height: 1.5rem;
 }
 
-.category-border {
+.category-bar {
   content: '';
   position: absolute;
   bottom: 0;

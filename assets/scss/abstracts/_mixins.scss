@@ -52,3 +52,18 @@
   letter-spacing: -.28px;
   color: #777;
 }
+
+// media query
+@mixin xsmall {
+  // 359px
+  @media (max-width: $mobile-xsmall) {
+    @content;
+  }
+}
+
+@mixin small {
+  // 375px
+  @media (max-width: $mobile-small) {
+    @content;
+  }
+}
