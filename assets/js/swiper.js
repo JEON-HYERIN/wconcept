@@ -125,7 +125,7 @@ const styleSwiper2 = new Swiper('.sc-style .category-list-wrap', {
 });
 
 // mdpick
-const mdpickSwiper1 = new Swiper('.sc-mdpick .category-list-wrap.swiper', {
+const mdpickSwiper1 = new Swiper('.sc-mdpick .category-list-wrap', {
   slidesPerView: 'auto',
 });
 
@@ -167,7 +167,7 @@ const mdpickSwiper3 = new Swiper('.sc-mdpick .inner-swiper', {
 });
 
 // ranking
-const rankingSwiper1 = new Swiper('.sc-ranking .product-content .category-list-wrap.swiper', {
+const rankingSwiper1 = new Swiper('.sc-ranking .product-content .category-list-wrap', {
   slidesPerView: 'auto',
 });
 
@@ -208,7 +208,7 @@ const rankingSwiper3 = new Swiper('.sc-ranking .product-content .inner-swiper', 
   }
 });
 
-const rankingSwiper4 = new Swiper('.sc-ranking .brand-content .category-list-wrap.swiper', {
+const rankingSwiper4 = new Swiper('.sc-ranking .brand-content .category-list-wrap', {
   slidesPerView: 'auto',
 });
 

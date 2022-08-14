@@ -24,16 +24,16 @@ $(function(){
     });
 
     // mdpick
+    setBorder('.sc-mdpick');
     $('.sc-mdpick .btn-category').click(function(){
-      const dataType=$(this).data('type');
       $(this).addClass('active').siblings().removeClass('active');
-      $(dataType).addClass('visible').siblings('.product-list-wrap').removeClass('visible');
     });
 
     $('.sc-mdpick .category-item').click(function(){
       idx = $(this).index();
       mdpickSwiper1.slideTo(idx);
       mdpickSwiper2.slideToLoop(idx);
+      
 
       let left = $(this).position().left;
       let width = $(this).find('.btn-category').width(); 
@@ -89,20 +89,27 @@ $(function(){
 
     // ranking
     setBorder('.sc-ranking');
-    $('.sc-ranking .btn-category').click(function(e){
-      e.preventDefault();
-      const dataType=$(this).data('type');
+    $('.sc-ranking .btn-category').click(function(){
+      $(this).addClass('active').siblings().removeClass('active');
+    });
 
-      $('.sc-ranking .btn-category').removeClass('active');
-      $(this).addClass('active');
+    $('.sc-ranking .category-item').click(function(){
+      idx = $(this).index();
+      mdpickSwiper1.slideTo(idx);
+      mdpickSwiper2.slideToLoop(idx);
+      
 
-      const left = $(this).position().left;
-      const width = $(this).find('.btn-category').width(); 
+      let left = $(this).position().left;
+      let width = $(this).find('.btn-category').width(); 
 
-      $('.sc-special .category-bar').css({
+      $('.sc-ranking .category-bar').css({
         'left': left, 
         'width': width
       });
+    })
+    
+    $('.sc-ranking .btn-brand').click(function(){
+      rankRollingInit();
     });
 
     $('.sc-ranking .btn-tab').click(function(){
@@ -110,8 +117,6 @@ $(function(){
 
       $(this).addClass('active').siblings().removeClass('active');
       $(dataType).addClass('visible').siblings('.tab-content').removeClass('visible');
-
-      rankRollingInit();
     });
 
   rankRollingInit = function () {

@@ -341,9 +341,9 @@ main .swiper-pagination-bullet-active { opacity: 1; }
 
 .sc-mdpick .category-item:nth-child(2n+1) { padding-right: 0.125rem; }
 
-.sc-mdpick .swiper-slide-active .btn-category { color: #000; }
+.sc-mdpick .btn-category { font-family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif; font-weight: 500; font-size: .875rem; height: 100%; color: #aaa; border-bottom: 2px solid transparent; -webkit-transition: all .2s ease-out; transition: all .2s ease-out; }
 
-.sc-mdpick .btn-category { font-family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif; font-weight: 500; font-size: .875rem; height: 100%; color: #aaa; }
+.sc-mdpick .swiper-slide-active .btn-category { color: #000; border-bottom-color: #000; }
 
 .sc-mdpick .product-item { margin-bottom: 1.5rem; width: 50%; }
 
@@ -465,9 +465,9 @@ main .swiper-pagination-bullet-active { opacity: 1; }
 
 @media (max-width: 375px) { .sc-special .category-item { margin-right: 1.25rem; } }
 
-.sc-special .btn-category { letter-spacing: -.28px; height: 1.25rem; font-family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif; font-weight: 500; font-size: .875rem; color: #aaa; }
+.sc-special .btn-category { letter-spacing: -.28px; height: 1.25rem; font-family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif; font-weight: 500; font-size: .875rem; color: #aaa; border-bottom: 2px solid transparent; -webkit-transition: all .2s ease-out; transition: all .2s ease-out; }
 
-.sc-special .btn-category.active { color: #000; }
+.sc-special .btn-category.active { color: #000; border-bottom-color: #000; }
 
 .sc-special .product-list-wrap { padding-left: 1.25rem; display: none; }
 
@@ -487,7 +487,7 @@ main .swiper-pagination-bullet-active { opacity: 1; }
 
 .sc-special .product-area .title { font-size: .75rem; line-height: 1rem; color: #333; }
 
-.sc-theme { position: relative; margin-bottom: 3.75rem; }
+.sc-theme { position: relative; margin-bottom: 0; }
 
 .sc-theme .group-theme { margin-bottom: 4rem; }
 
@@ -535,9 +535,9 @@ main .swiper-pagination-bullet-active { opacity: 1; }
 
 .sc-ranking .category-item { width: auto !important; margin-right: 1.5rem; }
 
-.sc-ranking .btn-category { height: 1.25rem; font-family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif; font-weight: 500; font-size: .875rem; color: #aaa; }
+.sc-ranking .btn-category { height: 1.25rem; font-family: "ProximaNova-Semibold", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", sans-serif; font-weight: 500; font-size: .875rem; color: #aaa; border-bottom: 2px solid transparent; -webkit-transition: all .2s ease-out; transition: all .2s ease-out; }
 
-.sc-ranking .swiper-slide-active .btn-category { color: #000; }
+.sc-ranking .swiper-slide-active .btn-category { color: #000; border-bottom-color: #000; }
 
 .sc-ranking .tab-content { display: none; }
 
