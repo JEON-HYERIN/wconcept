@@ -125,7 +125,7 @@ const styleSwiper2 = new Swiper('.sc-style .category-list-wrap', {
 });
 
 // mdpick
-const mdpickSwiper1 = new Swiper('.sc-mdpick .category-list-wrap', {
+const mdpickSwiper1 = new Swiper('.sc-mdpick .category-list-wrap.swiper', {
   slidesPerView: 'auto',
 });
 
