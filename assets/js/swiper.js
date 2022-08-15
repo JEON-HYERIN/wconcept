@@ -148,6 +148,7 @@ mdpickSwiper2.on('slideChange',function(){
 const mdpickSwiper3 = new Swiper('.sc-mdpick .inner-swiper', {
   pagination: {
     el: ".sc-mdpick .inner-swiper .swiper-pagination",
+    clickable: true
   },
   on:{
     'reachEnd':function(){
@@ -190,6 +191,7 @@ rankingSwiper2.on('slideChange',function(){
 const rankingSwiper3 = new Swiper('.sc-ranking .product-content .inner-swiper', {
   pagination: {
     el: ".sc-ranking .product-content .inner-swiper .swiper-pagination",
+    clickable: true
   },
   on:{
     'reachEnd':function(){
@@ -231,6 +233,7 @@ rankingSwiper5.on('slideChange',function(){
 const rankingSwiper6 = new Swiper('.sc-ranking .brand-content .inner-swiper', {
   pagination: {
     el: ".sc-ranking .brand-content .inner-swiper .swiper-pagination",
+    clickable: true
   },
   on:{
     'reachEnd':function(){
