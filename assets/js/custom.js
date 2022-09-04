@@ -109,7 +109,7 @@ $(function(){
     })
     
     $('.sc-ranking .btn-brand').click(function(){
-      rankRollingInit();
+      rankRepeatInit();
     });
 
     $('.sc-ranking .btn-tab').click(function(){
@@ -119,23 +119,23 @@ $(function(){
       $(dataType).addClass('visible').siblings('.tab-content').removeClass('visible');
     });
 
-  rankRollingInit = function () {
-    clearInterval(ranking_rolling);
+  rankRepeatInit = function () {
+    clearInterval(repeat);
     num = 0;
     $('.sc-ranking .swiper-slide-active .inner-swiper .swiper-slide-active .brand-item').removeClass("active");
     $('.sc-ranking .swiper-slide-active .inner-swiper .swiper-slide-active .brand-item').eq(0).addClass('active');
-    rankingRolling()
+    rankRepeat();
   };
 
   let num = 0;
-  rankingRolling = function () {
-      ranking_rolling = setInterval(function () {
+  rankRepeat = function () {
+      const repeat = setInterval(function () {
         $('.sc-ranking .swiper-slide-active .inner-swiper .swiper-slide-active .brand-item').removeClass("active");
         $('.sc-ranking .swiper-slide-active .inner-swiper .swiper-slide-active .brand-item').eq(num).addClass('active');
-          num === 4 ? num = 0 : num++
+          num === 4 ? num = 0 : num++;
       }, 2000)
   };
-  rankingRolling();
+  rankRepeat();
 
 
     // floating-nav
