@@ -37,6 +37,7 @@
           left: 0;
           width: 100%;
           height: 100%;
+          object-fit: cover;
         }
       }
 
@@ -276,14 +277,19 @@
     color: #aaa;
     border-bottom: 2px solid transparent;
     transition: all .2s ease-out;
-  }
 
-  .swiper-slide-active {
-    .btn-category {
+    &.active {
       color: #000;
       border-bottom-color: #000;
     }
   }
+
+  // .swiper-slide-active {
+  //   .btn-category {
+  //     color: #000;
+  //     border-bottom-color: #000;
+  //   }
+  // }
 
   .product-item {
     margin-bottom: 1.5rem;
@@ -964,14 +970,19 @@
     color: #aaa;
     border-bottom: 2px solid transparent;
     transition: all .2s ease-out;
-  }
 
-  .swiper-slide-active {
-    .btn-category {
+    &.active {
       color: #000;
       border-bottom-color: #000;
     }
   }
+
+  // .swiper-slide-active {
+  //   .btn-category {
+  //     color: #000;
+  //     border-bottom-color: #000;
+  //   }
+  // }
 
   .tab-content {
     display: none;
@@ -1284,6 +1295,7 @@
   .wdnastyle-area {
     .thumb-box {
       padding-bottom: 100%;
+
       background: {
         image: url("../images/banner/wdna_style_mask.png");
         repeat: no-repeat;
@@ -1297,10 +1309,11 @@
         left: 0;
         width: 100%;
         height: 100%;
+        object-fit: cover;
+      }
 
-        &::after {
-          background-color: transparent;
-        }
+      &::after {
+        background-color: transparent;
       }
     }
 
@@ -1508,6 +1521,73 @@
       height: 10.666666666666668vw;
       bottom: 21.86666667vw;
       right: 5.333333333vw;
+    }
+  }
+}
+
+// page-intro
+.page-intro {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, .7);
+  z-index: 100;
+
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 40px;
+    opacity: 0;
+    z-index: 1;
+  }
+
+  .thumb {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+    }
+  }
+
+  .link-main {
+    position: absolute;
+    bottom: 128px;
+    left: 0;
+    right: 0;
+    width: 80%;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-family: "ProximaNova-Semibold";
+    font-size: 16px;
+    text-align: center;
+    color: #121212;
+    background: #fff;
+    box-shadow: 0 8px 16px 0 RGB(0 0 0 / 16%);
+    opacity: 0;
+    pointer-events: none;
+
+    @include small {
+      bottom: 34.133vw;
+      max-width: 255px;
+      height: 14.9333vw;
+      font-size: 4.2666vw;
+      box-shadow: 0 2.133vw 4.266vw 0 RGB(0 0 0 / 16%);
     }
   }
 }

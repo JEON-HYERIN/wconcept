@@ -35,7 +35,7 @@ const updateSwiper = new Swiper('.sc-update .swiper', {
 });
 const specialSwiper = new Swiper('.sc-special .swiper', {
   slidesPerView: 'auto',
-  observer: true, 
+  observer: true,
   observeParents: true,
 });
 const themeSwiper1 = new Swiper('.sc-theme .swiper1', {
@@ -81,6 +81,7 @@ const specialpriceSwiper = new Swiper('.sc-specialprice .swiper', {
   },
 });
 const makeityoursSwiper = new Swiper('.sc-makeityours .swiper', {
+  loop: true,
   pagination: {
     el: ".sc-makeityours .swiper-pagination",
     clickable: true
@@ -112,7 +113,7 @@ wconceptTVSwiper.on('slideChange', function () {
 
 const styleSwiper = new Swiper('.sc-style .product-list-wrap', {
   slidesPerView: 'auto',
-  observer: true, 
+  observer: true,
   observeParents: true,
   pagination: {
     el: ".sc-style .swiper-pagination",
@@ -131,41 +132,44 @@ const mdpickSwiper1 = new Swiper('.sc-mdpick .category-list-wrap.swiper', {
 
 const mdpickSwiper2 = new Swiper('.sc-mdpick .main-swiper', {
   loop: true,
-  simulateTouch:false,
+  // simulateTouch:false,
 });
 
-mdpickSwiper1.on('slideChange',function(){
+mdpickSwiper1.on('slideChange', function () {
   realIdx = this.realIndex;
   mdpickSwiper1.slideTo(realIdx);
   mdpickSwiper2.slideToLoop(realIdx);
 })
 
-mdpickSwiper2.on('slideChange',function(){
+mdpickSwiper2.on('slideChange', function () {
   realIdx = this.realIndex;
   mdpickSwiper1.slideTo(realIdx);
+  mdpickSwiper2.slideToLoop(realIdx);
+  $('.sc-mdpick .btn-category').removeClass('active');
+  $('.sc-mdpick .btn-category').eq(realIdx).addClass('active');
 })
 
-const mdpickSwiper3 = new Swiper('.sc-mdpick .inner-swiper', {
-  pagination: {
-    el: ".sc-mdpick .inner-swiper .swiper-pagination",
-    clickable: true
-  },
-  on:{
-    'reachEnd':function(){
-      cnt = this.slides.length
-      realIdx = this.realIndex+1;
-      if(cnt === realIdx){
-        mdpickSwiper2.slideNext()
-      }
-    },
-    'reachBeginning':function(){
-      realIdx = this.realIndex;
-      if(0 === realIdx){
-        mdpickSwiper2.slidePrev()
-      }
-    }
-  }
-});
+// const mdpickSwiper3 = new Swiper('.sc-mdpick .inner-swiper', {
+//   pagination: {
+//     el: ".sc-mdpick .inner-swiper .swiper-pagination",
+//     clickable: true
+//   },
+//   on: {
+//     'reachEnd': function () {
+//       cnt = this.slides.length
+//       realIdx = this.realIndex + 1;
+//       if (cnt === realIdx) {
+//         mdpickSwiper2.slideNext()
+//       }
+//     },
+//     'reachBeginning': function () {
+//       realIdx = this.realIndex;
+//       if (0 === realIdx) {
+//         mdpickSwiper2.slidePrev()
+//       }
+//     }
+//   }
+// });
 
 // ranking
 const rankingSwiper1 = new Swiper('.sc-ranking .product-content .category-list-wrap', {
@@ -174,41 +178,44 @@ const rankingSwiper1 = new Swiper('.sc-ranking .product-content .category-list-w
 
 const rankingSwiper2 = new Swiper('.sc-ranking .product-content .main-swiper', {
   loop: true,
-  simulateTouch:false,
+  // simulateTouch:false,
 });
 
-rankingSwiper1.on('slideChange',function(){
+rankingSwiper1.on('slideChange', function () {
   realIdx = this.realIndex;
   rankingSwiper1.slideTo(realIdx);
   rankingSwiper2.slideToLoop(realIdx);
 })
 
-rankingSwiper2.on('slideChange',function(){
+rankingSwiper2.on('slideChange', function () {
   realIdx = this.realIndex;
   rankingSwiper1.slideTo(realIdx);
+  rankingSwiper2.slideToLoop(realIdx);
+  $('.sc-ranking .product-content .btn-category').removeClass('active');
+  $('.sc-ranking .product-content .btn-category').eq(realIdx).addClass('active');
 })
 
-const rankingSwiper3 = new Swiper('.sc-ranking .product-content .inner-swiper', {
-  pagination: {
-    el: ".sc-ranking .product-content .inner-swiper .swiper-pagination",
-    clickable: true
-  },
-  on:{
-    'reachEnd':function(){
-      cnt = this.slides.length
-      realIdx = this.realIndex+1;
-      if(cnt === realIdx){
-        rankingSwiper2.slideNext();
-      }
-    },
-    'reachBeginning':function(){
-      realIdx = this.realIndex;
-      if(0 === realIdx){
-        rankingSwiper2.slidePrev();
-      }
-    }
-  }
-});
+// const rankingSwiper3 = new Swiper('.sc-ranking .product-content .inner-swiper', {
+//   pagination: {
+//     el: ".sc-ranking .product-content .inner-swiper .swiper-pagination",
+//     clickable: true
+//   },
+//   on: {
+//     'reachEnd': function () {
+//       cnt = this.slides.length
+//       realIdx = this.realIndex + 1;
+//       if (cnt === realIdx) {
+//         rankingSwiper2.slideNext();
+//       }
+//     },
+//     'reachBeginning': function () {
+//       realIdx = this.realIndex;
+//       if (0 === realIdx) {
+//         rankingSwiper2.slidePrev();
+//       }
+//     }
+//   }
+// });
 
 const rankingSwiper4 = new Swiper('.sc-ranking .brand-content .category-list-wrap', {
   slidesPerView: 'auto',
@@ -216,38 +223,42 @@ const rankingSwiper4 = new Swiper('.sc-ranking .brand-content .category-list-wra
 
 const rankingSwiper5 = new Swiper('.sc-ranking .brand-content .main-swiper', {
   loop: true,
-  simulateTouch:false,
+  // simulateTouch:false,
 });
 
-rankingSwiper4.on('slideChange',function(){
+rankingSwiper4.on('slideChange', function () {
   realIdx = this.realIndex;
   rankingSwiper4.slideTo(realIdx);
   rankingSwiper5.slideToLoop(realIdx);
 })
 
-rankingSwiper5.on('slideChange',function(){
+rankingSwiper5.on('slideChange', function () {
   realIdx = this.realIndex;
   rankingSwiper4.slideTo(realIdx);
+  rankingSwiper5.slideToLoop(realIdx);
+  $('.sc-ranking .brand-content .btn-category').removeClass('active');
+  $('.sc-ranking .brand-content .btn-category').eq(realIdx).addClass('active');
+  // console.log(realIdx);
 })
 
-const rankingSwiper6 = new Swiper('.sc-ranking .brand-content .inner-swiper', {
-  pagination: {
-    el: ".sc-ranking .brand-content .inner-swiper .swiper-pagination",
-    clickable: true
-  },
-  on:{
-    'reachEnd':function(){
-      cnt = this.slides.length
-      realIdx = this.realIndex+1;
-      if(cnt === realIdx){
-        rankingSwiper5.slideNext();
-      }
-    },
-    'reachBeginning':function(){
-      realIdx = this.realIndex;
-      if(0 === realIdx){
-        rankingSwiper5.slidePrev();
-      }
-    }
-  }
-});
+// const rankingSwiper6 = new Swiper('.sc-ranking .brand-content .inner-swiper', {
+//   pagination: {
+//     el: ".sc-ranking .brand-content .inner-swiper .swiper-pagination",
+//     clickable: true
+//   },
+//   on: {
+//     'reachEnd': function () {
+//       cnt = this.slides.length
+//       realIdx = this.realIndex + 1;
+//       if (cnt === realIdx) {
+//         rankingSwiper5.slideNext();
+//       }
+//     },
+//     'reachBeginning': function () {
+//       realIdx = this.realIndex;
+//       if (0 === realIdx) {
+//         rankingSwiper5.slidePrev();
+//       }
+//     }
+//   }
+// });
