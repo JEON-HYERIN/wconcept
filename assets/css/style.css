@@ -690,7 +690,7 @@ main .swiper-pagination-bullet-active { opacity: 1; }
 
 .page-intro .thumb { position: absolute; left: 0; top: 0; width: 100%; height: 100%; opacity: 0; }
 
-.page-intro .thumb img { display: block; width: 100%; height: 100vh; -o-object-fit: cover; object-fit: cover; }
+.page-intro .thumb img { width: 100%; height: 100vh; -o-object-fit: cover; object-fit: cover; }
 
 .page-intro .link-main { position: absolute; bottom: 128px; left: 0; right: 0; width: 80%; height: 56px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin: 0 auto; font-family: "ProximaNova-Semibold"; font-size: 16px; text-align: center; color: #121212; background: #fff; -webkit-box-shadow: 0 8px 16px 0 RGB(0 0 0/16%); box-shadow: 0 8px 16px 0 RGB(0 0 0/16%); opacity: 0; pointer-events: none; }
 
