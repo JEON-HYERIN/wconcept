@@ -3,7 +3,10 @@ const gnbSwiper = new Swiper('#gnb .swiper', {
 });
 
 const visualSwiper = new Swiper('.sc-visual .swiper', {
-  autoplay: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
   loop: true,
   pagination: {
     el: '.sc-visual .swiper-pagination',
@@ -88,7 +91,10 @@ const makeityoursSwiper = new Swiper('.sc-makeityours .swiper', {
   },
 });
 const wconceptTVSwiper = new Swiper('.sc-wconceptTV .swiper', {
-  autoplay: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
   loop: true,
   slidesPerView: 'auto',
   centeredSlides: true,
